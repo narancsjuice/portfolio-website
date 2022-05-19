@@ -98,6 +98,15 @@ def contact():
         return render_template("contact.html", form=cform)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Renders when user types in non-existent hypertext reference
+    :return: 404.html
+    """
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     app.run(debug=True)
     csrf.init_app(app)
