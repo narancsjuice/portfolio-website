@@ -1,5 +1,6 @@
 {%extends "layout.html"%}
 {% set active_page = "experience" %}
+{% block title %}{{ super() }} Work experience{% endblock %}
 {%block content%}
 <div class="experience">
     <section class="text-gray-600 body-font">
@@ -8,16 +9,19 @@
           <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-orange-500 text-white relative z-10 title-font font-medium text-sm"></div>
           <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <div class="flex-shrink-0 w-24 h-24 text-orange-500 rounded-full inline-flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
               </svg>
             </div>
             <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Shooting Stars</h2>
-              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Your company name goes here </h2>
+              <h3 class="font-medium title-font text-gray-900 mb-1 text-md">?</h3>
+              <h3 class="title-font text-gray-900 mb-1 text-sm">2022-</h3>
+              <p class="leading-relaxed text-justify">
+              Building my own projects currently and open for new opportunities!<span class="font-medium text-black-900">☺</span></p>
             </div>
           </div>
         </div>
@@ -25,16 +29,26 @@
           <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-orange-500 text-white relative z-10 title-font font-medium text-sm"></div>
           <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
+            <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-orange-500 rounded-full inline-flex items-center justify-center">
+              <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQEhCwkR8drU9g/company-logo_100_100/0/1625056626252?e=1660780800&v=beta&t=WATsnNxknlUPCQFMjAYSBYgJS-XDROc5tb5Cm3pl6SQ">
             </div>
             <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The Catalyzer</h2>
-              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">LLP Group</h2>
+              <h3 class="font-medium title-font text-gray-900 mb-1 text-md">Technical Consultant - Integration Specialist</h3>
+              <h3 class="title-font text-gray-900 mb-1 text-sm">2019-2022</h3>
+              <p class="leading-relaxed text-justify">I was part of a software development team in a project-based work environment.
+                The largest projects I’ve worked on were integration tasks, mostly integrations between Infor ERP system and their
+                clients’ software (credit control software, invoicing systems, asset tracking environments).</br></br>
+                This work included (but was not limited to) establishing connection between the ERP database and the client’s software through
+                MSSQL and synchronizing data, or setting up a complex business data communication flows in the ERP by querying the client’s
+                APIs and transforming the responses with Python to another file format to be consumed by the ERP (like JSON to XML).</br></br>
+                I was part of the process from the blueprinting phase to the deployment phase in various projects, so I have gained some
+                experience with planning, documentation, development, version control and testing as well.</br></br>
+                Ad hoc projects were not uncommon either. I had the chance to develop .NET applications and tinker a bit with mobile development
+                frameworks such as Angular and also use azure automation services to monitor IoT devices. Occasional maintenance work on clients’
+                websites also meant doing assignments such as modifying the page layout or creating entirely new forms and pages.</p>
             </div>
           </div>
         </div>
@@ -42,17 +56,27 @@
           <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-orange-500 text-white relative z-10 title-font font-medium text-sm"></div>
           <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                <circle cx="12" cy="5" r="3"></circle>
-                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-              </svg>
+            <div class="flex-shrink-0 w-24 h-24 text-orange-500 rounded-full inline-flex items-center justify-center">
+              <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQFxkjdQQLgeyQ/company-logo_100_100/0/1543523950282?e=1660780800&v=beta&t=gAe3D5mhxTrg2rIMfCbkdVDkKsW-C3PIofIrB9pKkhI">
             </div>
             <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The 400 Blows</h2>
-              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Adriana Automatik Kft.</h2>
+              <h3 class="font-medium title-font text-gray-900 mb-1 text-md">Systems Analyst - Tester</h3>
+              <h3 class="title-font text-gray-900 mb-1 text-sm">2018-2019</h3>
+              <p class="leading-relaxed text-justify">Mainly I was working with our developers and our customers to fix bugs and enhance
+                the company’s software according to the customers’ needs.</br></br>
+                My responsibilities also included making sure that the employees’ devices were securely encrypted and each
+                of the employees had strong passwords along with teaching them the use of password managers and correct
+                handling of security risks.</br></br>
+                Occasionally, I had to analyse and organise the company’s software usage and user data and create graphs and
+                reports from the gathered information.</br></br>
+                Later on during my time there, I was put in charge of testing, which meant working on both the automatic test
+                framework and some manual testing too.</br></br>
+                One of my bigger achievements at Adriana was helping to bring about a collaboration between Adriana and another
+                accounting software developer firm by testing both companies' software and keeping in close contact with both companies'
+                developers to be able to fix issues and ensure smooth operation of the integration.</p>
             </div>
           </div>
         </div>
@@ -60,17 +84,24 @@
           <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-orange-500 text-white relative z-10 title-font font-medium text-sm"></div>
           <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
+            <div class="flex-shrink-0 w-24 h-24 text-orange-500 rounded-full inline-flex items-center justify-center">
+              <img class="rounded-full w-20 h-20" src="https://media-exp1.licdn.com/dms/image/C4E0BAQHi1QhJs87iLQ/company-logo_100_100/0/1605513601036?e=1660780800&v=beta&t=DxsikTSepPwok7t6KyICoZOQfGAfFY0gc863rbI6YXk">
             </div>
             <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Neptune</h2>
-              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Corvinus University of Budapest</h2>
+              <h3 class="font-medium title-font text-gray-900 mb-1 text-md">Business Information Technologist BsC</h3>
+              <h3 class="title-font text-gray-900 mb-1 text-sm">Graduated 2019</h3>
+              <p class="leading-relaxed text-justify">During my university years I have learned about many interesting subjects in
+                economics and informatics. I’ve used a couple of programming languages for different means, such as
+                creating databases and connecting them to an application, creating websites and doing SQL queries.
+                I have learned statistics as well, and I know how to visualize data in Tableau and use
+                models in data mining software to help support decision-making. </br></br>
+                I’ve participated in many group projects which has helped me understand the inner workings of companies
+                and their processes. I have created solutions with my classmates (in small groups) to problems regarding
+                the aforementioned in order to make the company efficient and profitable, while also appealing to the customers’
+                needs and wants.</p>
             </div>
           </div>
         </div>
