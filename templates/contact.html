@@ -2,7 +2,7 @@
 {% set active_page = "contact" %}
 {% block title %}{{ super() }} Contact{% endblock %}
 {%block content%}
-<div class="contact">
+<div class="contact h-full">
     <section class="text-gray-600 body-font relative">
       <div class="container px-5 py-24 mx-auto">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -14,7 +14,7 @@
                   </div>
             {% else %}
 
-          <div class="flex flex-col text-center w-full mb-12">
+          <div class="flex flex-col text-center w-full mb-6">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Me</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">If you wish to send me a message, please use the form below. </p>
           </div>
@@ -24,35 +24,35 @@
                 <div class="p-2 lg:w-2/3 md:w-2/3 sm:w-2/3 mx-auto">
                   <div class="relative">
                     {{ form.name.label(class_="leading-7 text-sm text-gray-600") }}
-                    {{ form.name(class_="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
+                    {{ form.name(class_="w-full bg-stone-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
                   </div>
                 </div>
                 <div class="p-2 lg:w-2/3 md:w-2/3 sm:w-2/3 mx-auto">
                   <div class="relative">
                     {{ form.email.label(class_="leading-7 text-sm text-gray-600") }}
-                    {{ form.email(class_="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
+                    {{ form.email(class_="w-full bg-stone-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
                   </div>
               </div>
               <div class="p-2 lg:w-2/3 md:w-2/3 sm:w-2/3 mx-auto">
                 <div class="relative">
                   {{ form.subject.label(class_="leading-7 text-sm text-gray-600") }}
-                  {{ form.subject(class_="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
+                  {{ form.subject(class_="w-full bg-stone-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out") }}
                 </div>
               </div>
               <div class="p-2 lg:w-2/3 md:w-2/3 sm:w-2/3 mx-auto">
                 <div class="relative">
                   {{ form.message.label(class_="leading-7 text-sm text-gray-600") }}
-                  {{ form.message(class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out") }}
+                  {{ form.message(class="w-full bg-stone-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-orange-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out") }}
                 </div>
               </div>
               <div class="p-2 w-full">
-                  {{ form.submit(class_="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg") }}
+                  {{ form.submit(class_="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-700 rounded text-lg") }}
               </div>
             </form>
             
             {% endif %}
 
-            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+            <div class="p-2 w-full pt-8 mt-2 border-t border-gray-200 text-center">
               <a class="text-gray-600">Find me on social media:</a>
               <p class="leading-normal my-5">
               </p>
