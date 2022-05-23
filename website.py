@@ -58,7 +58,15 @@ def experience():
     return render_template("experience.html")
 
 
-
+@app.route("/skills/")
+def skills():
+    """
+    Renders skills page
+    :return: skills.html
+    """
+    return render_template("skills.html")
+  
+  
 @app.route('/download', methods=['GET', 'POST'])
 def download():
     path = "./static/media/km_cv.pdf"
