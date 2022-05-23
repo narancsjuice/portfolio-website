@@ -57,6 +57,15 @@ def experience():
     return render_template("experience.html")
 
 
+@app.route("/skills/")
+def skills():
+    """
+    Renders skills page
+    :return: skills.html
+    """
+    return render_template("skills.html")
+
+
 # Create contact form
 class ContactForm(FlaskForm):
     name = StringField(label="Name", validators=[DataRequired()])
