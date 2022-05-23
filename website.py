@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from flask_wtf import FlaskForm, CSRFProtect
 from flask_mail import Message, Mail
 from wtforms.validators import DataRequired, Email
 from wtforms import StringField, TextAreaField, SubmitField
 import configparser
+import os
 
 # Create Flask instance
 app = Flask(__name__)
@@ -55,6 +56,21 @@ def experience():
     :return: experience.html
     """
     return render_template("experience.html")
+
+
+@app.route("/skills/")
+def skills():
+    """
+    Renders skills page
+    :return: skills.html
+    """
+    return render_template("skills.html")
+  
+  
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    path = "./static/media/km_cv.pdf"
+    return send_file(path, as_attachment=True)
 
 
 # Create contact form
