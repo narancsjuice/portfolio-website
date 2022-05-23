@@ -1,2 +1,9 @@
 # portfolio-website
-My website showcasing my skills
+**Preview 0.3**  
+
+This website was built with the intention of showcasing some of my web development
+skills and providing a "substitute" for my resume.
+
+Technologies used:
+* Backend: Python (libraries: flask, flask_mail, wtforms) 
+* Frontend: TailwindCSS, Tailblocks, jQuery
