@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm, CSRFProtect
 from flask_mail import Message, Mail
 from wtforms.validators import DataRequired, Email
 from wtforms import StringField, TextAreaField, SubmitField
-import configparser
+#import configparser
 import os
 
 # Create Flask instance
@@ -16,18 +16,18 @@ mail = Mail()
 csrf = CSRFProtect(app)
 
 # Read config.env for sensitive information
-config = configparser.ConfigParser(interpolation=None)
-config.read("config.env")
+#config = configparser.ConfigParser(interpolation=None)
+#config.read("config.env")
 
 
 # App configuration for Contact Form email feature for encrypted google
 # mail server
-app.config["SECRET_KEY"] = config["SENS_INFO"]["SECRET_KEY"]
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = config["SENS_INFO"]["MAIL_USERNAME"]
-app.config["MAIL_PASSWORD"] = config["SENS_INFO"]["MAIL_PASSWORD"]
+app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
+app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
 mail.init_app(app)
 
 
@@ -65,11 +65,11 @@ def skills():
     :return: skills.html
     """
     return render_template("skills.html")
-  
-  
+
+
 @app.route('/download', methods=['GET', 'POST'])
 def download():
-    path = "./static/media/km_cv.pdf"
+    path = "static/media/km_cv.pdf"
     return send_file(path, as_attachment=True)
 
 
@@ -95,13 +95,13 @@ def contact():
     # If user send a POST request with Send button on form, send email with
     # template that gets form values
     if request.method == "POST":
-        msg = Message(cform.subject.data, sender=config["SENS_INFO"]["SENDER"],
-                      recipients=[config["SENS_INFO"]["RECIPIENT"]])
+        msg = Message(cform.subject.data, sender=os.getenv("SENDER"),
+                      recipients=[os.getenv("RECIPIENT")])
         msg.body = """
               New contact request from the website.
-              
+
               From: %s <%s>
-              
+
               Message: %s
               """ % (cform.name.data, cform.email.data, cform.message.data)
         mail.send(msg)
@@ -124,5 +124,5 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
     csrf.init_app(app)
